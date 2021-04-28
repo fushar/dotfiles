@@ -10,7 +10,7 @@
 ```
 brew tap caskroom/fonts
 brew install font-hack-nerd-font
-ln -s $HOME/dotfiles/iterm2-profile-13-inch.json $HOME/Library/Application\ Support/iTerm2/DynamicProfiles/
+ln -s $HOME/dotfiles/iterm2-profile.json $HOME/Library/Application\ Support/iTerm2/DynamicProfiles/
 ```
 
 ### Install oh-my-zsh
