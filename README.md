@@ -24,3 +24,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 ```
 
 Kill all instances of iTerm2, and then restart, and set the Powerlevel9k profile as the default.
+
+### App color themes
+
+- Visual Studio Code: [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
+- Sublime Text: [One Dark](https://packagecontrol.io/packages/Theme%20-%20One%20Dark)
