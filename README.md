@@ -33,3 +33,24 @@ Kill all instances of iTerm2, and then restart, and set the Powerlevel9k profile
 ### Web development setup
 
 - https://chrisbergeron.com/2021/03/17/MacOS-11-Big-Sur-Nginx-PHP-and-Mysql/
+
+#### phpmyadmin
+
+```
+server {
+    listen 80;
+
+    server_name phpmyadmin.local;
+    root /opt/homebrew/var/www/phpmyadmin;
+
+    index index.php index.html index.htm;
+
+    location ~ \.php$ {
+        try_files      $uri = 404;
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+}
+```
