@@ -77,7 +77,7 @@ plugins=(
   docker
   git
   golang
-  osx
+  macos
   rbenv
   vscode
   zsh-autosuggestions
