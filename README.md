@@ -29,6 +29,13 @@ Kill all instances of iTerm2, and then restart, and set the Powerlevel9k profile
 - Visual Studio Code: [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
 - Sublime Text: [One Dark](https://packagecontrol.io/packages/Theme%20-%20One%20Dark)
 
+### Java
+
+```
+brew install openjdk@11
+sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+```
+
 ### Web development setup
 
 - https://chrisbergeron.com/2021/03/17/MacOS-11-Big-Sur-Nginx-PHP-and-Mysql/
