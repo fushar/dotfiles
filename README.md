@@ -29,6 +29,14 @@ Kill all instances of iTerm2, and then restart, and set the Powerlevel9k profile
 - Visual Studio Code: [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
 - Sublime Text: [One Dark](https://packagecontrol.io/packages/Theme%20-%20One%20Dark)
 
+### GCC
+
+```
+brew install gcc
+cd /opt/homebrew/bin
+ln -s g++-14 g++
+```
+
 ### Java
 
 ```
