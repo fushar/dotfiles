@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,17 +15,8 @@ export ZSH="/Users/fushar/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 DEFAULT_USER=$USER
-POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs newline status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs time)
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_DIR_HOME_BACKGROUND="navy"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="navy"
-POWERLEVEL9K_DIR_ETC_BACKGROUND="navy"
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="navy"
-POWERLEVEL9K_TIME_BACKGROUND="navy"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -78,6 +76,7 @@ plugins=(
   git
   golang
   macos
+  nodenv
   rbenv
   vscode
   zsh-autosuggestions
@@ -115,3 +114,25 @@ export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+export TCFRAME_HOME=~/Code/ia-toki/tcframe
+alias tcframe=$TCFRAME_HOME/scripts/tcframe
+
+export PATH="$PATH:/Library/TeX/texbin"
+
+# pnpm
+export PNPM_HOME="/Users/fushar/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 23)
+export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/Users/fushar/.opencode/bin:$PATH
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
